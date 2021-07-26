@@ -34,4 +34,4 @@ const handle = async (e) => {
             synonyms.innerHTML = '<p class= "synonym-fields">No synonyms found</p>';
         }
     }
-};
+}; 
