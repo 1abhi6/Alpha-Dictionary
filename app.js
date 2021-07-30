@@ -13,7 +13,7 @@ const handle = async (e) => {
     if (e.keyCode === 13) {
         const word = e.target.value;
         const result = await fetch(url + word);
-       if (!result.ok) {
+        if (!result.ok) {
             alert("Oops 😬, Word not found. Please check the spelling and try again!!")
                 .result.style.display = "none";
         }
@@ -35,4 +35,4 @@ const handle = async (e) => {
             synonyms.innerHTML = '<p class= "synonym-fields">No synonyms found</p>';
         }
     }
-}; 
+};
