@@ -13,8 +13,9 @@ const handle = async (e) => {
     if (e.keyCode === 13) {
         const word = e.target.value;
         const result = await fetch(url + word);
-        if (!result.ok) {
-            alert("😬 Oops!! We didn't get any match in our database. Please check your word and try again...")
+       if (!result.ok) {
+            alert("Oops 😬, Word not found. Please check the spelling and try again!!")
+                .result.style.display = "none";
         }
         const data = await result.json();
         resultDiv.style.display = "block";
