@@ -1,53 +1,166 @@
-/* To make it mobile friendly media query is added */
-@media only screen and (max-width:1100px){
-    .container::before{
-        content:"";
-        position:absolute;
-        background:url('img/mobile_bg.jpg') no-repeat center center/cover;
-        height: 100vh;
-    }
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo 2", cursive;
+}
 
-    .container{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        padding-top: 0px;
-        padding-left: 0px;
-        padding:10px;
-    }
-    
-    .h1{
-        color:rgb(255, 255, 255);
-        font-size:2.3rem;
-    }
-    .search-field{
-        width: 93vw;
-    }
-    .result{
-        margin-top: 15px;
-        overflow-x: hidden;
-        width:100%;
-    }
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #a5a5a5;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #6d6d6d;
+    border-radius: 20px;
+}
+::selection {
+    background-color: #226f93;
+    color: #fff;
+}
 
-    .result > h1{
-        font-size: 2.3rem;
-    }
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-left: 550px;
+    align-items: center;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    background: url("img/bg.jpg") no-repeat center center/cover;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    opacity: 0.89;
+    z-index: -1;
+}
 
-    .phonetics{
-        padding: 5px 15px;
-        font-size: 1.1rem;
-    }
-    .word-defination{
-        padding: 5px 10px;
-        font-size:20px;
-    }
+.h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 23px;
+    color: #fff;
+}
 
-    .wordmeaning{
-        margin: 5px 10px;
-        font-size:25px;
-    }
+.input {
+    margin-bottom: 23px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing:1px;
 
-    .synonym-fields{
-        font-size:1.1rem;
-    }
+    /* margin-left: 500px; */
+}
+
+.search-field {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    outline: none;
+    width: 500px;
+    border: 1px solid #1e1e1e;
+    border-radius: 7px;
+}
+
+.result {
+    display: none;
+    padding: 15px 20px;
+    width: 500px;
+    height: 500px;
+    margin-top: 30px;
+    border: 1px solid #1e1e1e;
+    border-radius: 7px;
+    overflow-y: scroll;
+    background-color: white;
+    /* margin-left: 500px; */
+}
+.result > h1 {
+    font-size: 2.6rem;
+    font-weight: 500;
+    display: inline;
+    letter-spacing: 1px;
+}
+
+.phonetics {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #226f93f6;
+    color: rgb(255, 255, 255);
+    margin-bottom: 23px;
+    margin-left: 10px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.result > audio {
+    width: 100%;
+    margin-bottom: 23px;
+    outline: none;
+    border: 1px solid #bbbbbb;
+    border-radius: 50px;
+}
+
+.wordmeaning {
+    display: inline-block;
+    margin: 5px 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.word-defination {
+    padding: 5px 15px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.synonyms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.synonym-fields {
+    font-size: 20px;
+    margin: 5px 10px;
+    padding: 5px 15px;
+    background-color: #226f93f6;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.ftr {
+    display: grid;
+    place-items: center;
+    background-color: #353a3f;
+    height: 59px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.ftr > p {
+    margin-top: 0px;
+    color: white;
+}
+
+.social_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fab {
+    color: white;
+    border-radius: 2px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.fab:hover {
+    color: rgb(56, 56, 56);
+    background-color: white;
 }
