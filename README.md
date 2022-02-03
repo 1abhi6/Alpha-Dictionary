@@ -1,4 +1,4 @@
-# Alpha Dictionary
+<b> Alpha Dictionary</b>
 # Website link
 https://1abhi6.github.io/Alpha-Dictionary/
 
